@@ -92,14 +92,14 @@ public class ArrayList1 {
         元素个数 size()  返回已有元素个数
         boolean isEmpty() 是否为空
                  */
-        /*list.add("y");
+        list.add("y");
         list.add("y");
         list.add("d");
         list.add("s");
         list.clear();
         //System.out.println(list);
         System.out.println(list.size());
-        System.out.println(list.isEmpty());*/
+        System.out.println(list.isEmpty());
 
 
     }

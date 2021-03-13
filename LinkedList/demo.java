@@ -1,3 +1,4 @@
+/*
 package java2021.LinkedList;
 
 public class demo {
@@ -22,30 +23,37 @@ public class demo {
 
 
         //遍历链表
-        /*int count=0;
+        */
+/*int count=0;
         while (cur != null) {
             System.out.println(cur.val);
             cur = cur.next;
             count++;
         }
-        System.out.println(count);*/
+        System.out.println(count);*//*
+
 
 
         //找最后一个节点
-        /*Node last=head;
+        */
+/*Node last=head;
         while(last.next!=null&&head!=null){
             last=last.next;
         }
-        System.out.println(last.val);*/
+        System.out.println(last.val);*//*
+
 
         //找倒数第二个节点
-       /* Node last2=head;
+       */
+/* Node last2=head;
         while(last2.next.next!=null){
             last2=last2.next;
         }
-        System.out.println(last2.val);*/
+        System.out.println(last2.val);*//*
+
 
     //删除节点n3
+*/
 /*
         Node prev=n2;
         prev.next=prev.next.next;
@@ -53,11 +61,13 @@ public class demo {
             System.out.println(cur.val);
             cur = cur.next;
         }
-*/
+*//*
+
 
         //插入节点
         //1.先把元素装入节点中
-       /* Node prev=n2;
+       */
+/* Node prev=n2;
         Node n5=new Node();
         n5.val=7;
 
@@ -66,15 +76,12 @@ public class demo {
         while (cur != null) {
             System.out.println(cur.val);
             cur = cur.next;
-        }*/
+        }*//*
+
         //2 3 7 4 5
 
 
 
 
-
-
-
-
     }
-}
+}*/

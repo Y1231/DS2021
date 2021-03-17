@@ -83,10 +83,10 @@ public class BasicOperation {
 
     public static void main(String[] args) {
 
-        Node head=null;
-        head=pushHead(head,4);
-        head=pushHead(head,5);
-        head=pushHead(head,6);
+        Node head = null;
+        head = pushHead(head, 4);
+        head = pushHead(head, 5);
+        head = pushHead(head, 6);
 
 
         printNode(head);
@@ -97,7 +97,7 @@ public class BasicOperation {
         /*head=DeleteBack(head);
         printNode(head);*/
 
-        pushBack(head,66);
+        pushBack(head, 66);
         printNode(head);
 
 
@@ -120,6 +120,20 @@ public class BasicOperation {
         }*/
 
 
+/*        Node fast=head;
+        Node slow=head;
+
+        while(fast!=null){
+            fast=fast.next.next;
+            slow=slow.next;
+        }
+
     }
+
+    */
+    }
+
+
+
 
 }

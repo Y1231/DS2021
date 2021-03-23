@@ -142,36 +142,79 @@ public class MyLinkedList implements MyList {
     @Override
     public boolean remove(String e) {
 
-        return false;
+        int index=indexOf(e);
+
+        if(index<0||index>=size()){
+            throw new ArrayIndexOutOfBoundsException("下标异常");
+        }
+        remove(index);
+        return true;
+
     }
 
     @Override
     public String get(int index) {
-        return null;
+        if(index<0||index>=size()){
+            throw new ArrayIndexOutOfBoundsException("你不对劲！");
+        }
+        MyListNode node=head;
+        for(int i=0;i<index;i++){
+            node=node.next;
+        }
+        return node.val;
     }
 
     @Override
     public String set(int index, String e) {
-        return null;
+        if(index<0||index>=size()){
+            throw new ArrayIndexOutOfBoundsException("你不对劲！");
+        }
+        MyListNode node=head;
+        for(int i=0;i<index;i++){
+            node=node.next;
+        }
+        String oldE=node.val;
+        node.val=e;
+
+        return e;
     }
 
     @Override
     public boolean contains(String e) {
-        return false;
+
+        return indexOf(e)>=0;
     }
 
     @Override
     public int indexOf(String e) {
-        return 0;
+        //遍历查找
+        int i=0;
+        for(MyListNode cur=head;cur!=null;cur=cur.next){
+            if(cur.val.equals(e)){
+                return i;
+            }
+            i++;
+        }
+        return -1;
     }
 
     @Override
     public int lastIndexOf(String e) {
-        return 0;
+        int i=size()-1;
+        for(MyListNode cur=last;cur!=null;cur=cur.prev){
+            if(cur.val.equals(e)){
+                return i;
+            }
+            i--;
+        }
+        return -1;
     }
 
     @Override
     public void clear() {
+        head=null;
+        last=null;
+        //size()=0;
 
     }
 
@@ -190,7 +233,8 @@ public class MyLinkedList implements MyList {
 
     @Override
     public boolean isEmpty() {
-        return false;
+
+        return size()==0;
     }
 
     @Override
@@ -202,7 +246,9 @@ public class MyLinkedList implements MyList {
         while (cur != null) {
 
             sb.append(cur.val);
+            if(cur!=last){
             sb.append(",");
+            }
             cur = cur.next;
         }
         sb.append("]");

@@ -1,6 +1,7 @@
 package java2021.Heap;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 /**
  * 大堆，小堆
@@ -52,7 +53,7 @@ public class demo {
     /**
      * 1.先找到最后一层parents节点【size-2]/2
      * 从上往下
-     * 
+     *
      */
     public static void createHeap(long[] array,int size){
         int lastchildIndex=size-1;
@@ -68,4 +69,17 @@ public class demo {
         heapify(array, size, 0);
         System.out.println(Arrays.toString(array));
     }
+
+    /**
+     * PriorityQueue内部是小堆，返回最小的元素
+     * 可用方法 ：入队列add(e)
+     * 查看队首元素element()
+     * 出队列remove()
+     *
+     * 元素与元素之间可以比较的前提是：
+     * 1.元素具备自然顺序：元素的类实现了Comparable接口
+     * 2.传给优先级队列一个比较器PriorityQueue
+     * PriorityQueue(PriorityQueue<元素类型>)
+     */
+
 }

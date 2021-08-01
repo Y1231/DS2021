@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ball fall down</title>
+    <style>
+        #ball{
+            position:absolute;
+            top:0px;
+            left:100px;
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ball"></div>
+    <script>
+        var ball = document.querySelector("#ball");
+        var y = 0;
+        var dir = true;
+        var v = 0.1;
+        var a = 0.2;
+
+        function fall() {
+            v = v + a;
+            if (y > 200) {
+                dir = false;
+            } else if(y<0){
+                dir = true;
+            }
+
+            if (dir) {
+                y = y + v;
+            } else {
+                y = y - v;
+            }
+            
+            var styleStr = "top:" + y + "px";
+            ball.style = styleStr;
+        }
+        setInterval(fall, 1000/24);
+    </script>
+
+</body>
+
+</html>
